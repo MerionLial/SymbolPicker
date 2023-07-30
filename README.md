@@ -23,16 +23,16 @@ Here is what each parameter is for:
         apiURL - The API url to get the symbols.
         urlParams - Parameters to send to the API.
 
-You can show or hide the picker:
+Per default, it comes with a button to show and hide the UI. But you can show or hide the picker 'manually' too. I should probably add an option like button=false :
 
     myPicker.show();  // Show the picker
     myPicker.hide();  // Hide the picker
 
-You can set the icon for each category folder:
+Per default, the tabs sport the name of the folder the icons are from. But you can set a custom name or an image or unicode icon for each category:
 
     myPicker.setFolderIcon('folderName', 'iconName');
 
-You can also set the order of the tabs:
+You can also set the order of the tabs. These are the original names, not the ones you set with the function above:
 
     myPicker.setTabOrder(['category1', 'category2', 'category3']);
 

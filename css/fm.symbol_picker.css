@@ -1,0 +1,97 @@
+.symbol-picker-container {
+    position: relative;                     /* Relative to its normal position */
+}
+
+.symbol-picker-preview {
+    position: relative;                     /* Relative to its normal position */
+    padding-left: 5%;
+    height: 50px;
+}
+
+.symbol-picker {
+    display: none;                          /* Hidden by default */
+    position: absolute;                     /* Absolute position to the parent div */
+    width: 200px;                            /* Full width */
+    z-index: 10000;                           /* Overlay everything else */
+    margin-top: 50px;
+    background-color: white;
+    border: 1px solid #082170;
+    border-bottom: none;
+    box-sizing: border-box;
+}
+
+.symbol-picker-category{
+    display: grid;  /* Use grid */
+    grid-template-columns: repeat(auto-fit, 36px);  /* Define the grid columns. This line will create as many 36px wide columns as possible */
+    grid-template-rows: 36px;  /* Define the grid rows. This line will make the rows 36px high */
+    grid-auto-rows: 36px;  /* Make auto-added rows 36px high */
+    gap: 2px;  /* Define the space between grid items */
+    justify-content: start;  /* Align the items to the start horizontally */
+    align-items: start;  /* Align the items to the start vertically */
+    padding: 2px;  /* Space around the grid items */
+    /* the rest of styles */
+    width: 200px;
+    position: absolute;
+    background-color: white;
+    margin-left: -1px;
+    border: 1px solid #082170;
+    border-top: none;
+    box-sizing: border-box;
+}
+
+.symbol-picker-button{
+    font-family: 'Open Sans';
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-variant: small-caps;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fcd21d;
+    color: #082170;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.symbol-picker-button:hover {
+    background-color: #082170;
+    color: #fcd21d;
+}
+
+.tabs {
+    display: flex; /* Arrange tabs in a line */
+    justify-content: flex-start; /* Align tabs to the left */
+    gap: 0rem; /* Spacing between tabs */
+    margin-bottom: 1rem; /* Spacing below the tabs */
+    max-width: 100%;
+}
+
+.tab {
+    flex-shrink: 1; /* Allow the tab to shrink if the space is too small */
+    flex-grow: 1;   /* Allow the tab to grow if there's extra space */
+    width: 0;       /* Don't let the tab take up any extra space by default */
+    max-width: 100%;
+    padding: 0.5rem 0.5rem; /* Space inside the tab button */
+    border: 1px solid #082170; /* Border color */
+    border-bottom: none; /* Remove bottom border */
+    background-color: #fcd21d; /* Background color when not selected */
+    cursor: pointer; /* Change mouse cursor on hover */
+}
+
+.tab:hover {
+    background-color: #ddd; /* Background color on hover */
+}
+
+.tab.selected {
+    background-color: #fff; /* Background color when selected */
+    font-weight: bold; /* Make text bold when selected */
+}
+
+.symbol-picker-symbol{
+    width: 36px;  /* Fill the entire grid cell */
+    height: 36px;  /* Fill the entire grid cell */
+    object-fit: contain;  /* Keep aspect ratio while filling the cell */
+}
+
